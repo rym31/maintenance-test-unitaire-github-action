@@ -23,3 +23,10 @@ jobs:
             #   run: ./mvnw compile
             - name: Comile le projet et les tests unitaires
               run: ./mvnw test -Dtest=CalculatriceTest
+            - name: Build
+              run: ./mvnw -B clean package -DskipTests   # produit le .jar dans target/
+            - name: Publier le .jar en artefact
+              uses: actions/upload-artifact@v5
+              with:
+                  name: application-jar
+                  path: target/*.jar          # ex. target/spring-petclinic-rest-*.jar
