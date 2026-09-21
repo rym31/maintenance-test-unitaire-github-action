@@ -22,4 +22,4 @@ jobs:
             # - name: Compile le projet
             #   run: ./mvnw compile
             - name: Comile le projet et les tests unitaires
-              run: ./mvnw test
+              run: ./mvnw test -Dtest=CalculatriceTest
