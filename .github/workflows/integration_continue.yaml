@@ -18,5 +18,7 @@ jobs:
                 distribution: 'temurin'
             - name: Ajouter droit pour la compilation
               run: chmod +x mvnw
-            - name: Compile le projet
-              run: ./mvnw compile
+            # - name: Compile le projet
+            #   run: ./mvnw compile
+            - name: Comile le projet et les tests unitaires
+              run: ./mvnw test
