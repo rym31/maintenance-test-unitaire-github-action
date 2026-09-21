@@ -2,6 +2,7 @@
 name: Compilation du projet atelier-test-unitaires
 on:
     push:
+    workflow_dispatch: # Manual trigger sur github. 
 #Les jobs sont les differentes etspe du workflow.
 jobs:
     #Nom du premier job. Ici, il s'agit de la compilation du projet.
